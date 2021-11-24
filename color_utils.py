@@ -1,7 +1,6 @@
 import sys
 
 import _utils
-import mass_repainter
 
 RED = 2
 GREEN = 1
@@ -26,11 +25,6 @@ def repaint_img(img, colors, func, args=None):
 				_utils.loading()
 
 	return list(new_colors)
-
-
-def main():
-	redrawer = mass_repainter.MassRedrawer()
-	redrawer.run()
 
 
 def make_brighter_tone_bgr(color, power):
@@ -72,7 +66,3 @@ def any_to_red(color):
 	dominant = sorted(color[:-1], reverse=True)
 	color[RED] = dominant[0]
 	return color
-
-
-if __name__ == '__main__':
-	main()

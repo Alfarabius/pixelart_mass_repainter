@@ -18,6 +18,12 @@ class MassRedrawer:
 	def __init__(self):
 		os.system('')
 
+		if not os.path.exists(self.SRC):
+			os.mkdir(self.SRC)
+
+		if not os.path.exists(self.RESULT):
+			os.mkdir(self.RESULT)
+
 		self.funcs = {
 			0: color_utils.quit_prg,
 			1: color_utils.red_to_green,
