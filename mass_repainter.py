@@ -24,6 +24,9 @@ class MassRedrawer:
 		if not os.path.exists(self.RESULT):
 			os.mkdir(self.RESULT)
 
+		if not os.path.exists(self.TMP):
+			os.mkdir(self.TMP)
+
 		self.funcs = {
 			0: color_utils.quit_prg,
 			1: color_utils.red_to_green,

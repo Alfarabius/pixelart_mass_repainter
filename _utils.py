@@ -52,5 +52,5 @@ def get_menu_choice(funcs):
 			print(TermColor.RED + msg)
 			continue
 
-		if 0 < user_choice <= len(funcs):
+		if 0 <= user_choice < len(funcs):
 			return user_choice
